@@ -11,6 +11,8 @@ import './blocks/seventh-block'; // Add this line
 
 import './blocks/eight-block.js'; // Add this line
 
+import './blocks/working-line-block'; // Add this line
+
 import './style.scss';
 
 import edit from "./edit";

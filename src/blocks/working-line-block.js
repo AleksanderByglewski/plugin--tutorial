@@ -10,8 +10,8 @@ const MY_TEMPLATE = [
 import '../editor.scss';
 
 
-registerBlockType( 'alecadd-giveaway/my-eight-block', {
-    title: 'My eight block',
+registerBlockType( 'alecadd-giveaway/working-line-block', {
+    title: 'Working line block',
     icon: 'smiley',
     category: 'common',
     attributes: {
@@ -69,7 +69,7 @@ registerBlockType( 'alecadd-giveaway/my-eight-block', {
                     </div> */}
                     <div class="col-6">
                     <div {...useBlockProps}>
-                        <InnerBlocks.Content />
+                        <InnerBlocks.Content className="my-classs" />
                     </div>
                     </div>
                 </div>
