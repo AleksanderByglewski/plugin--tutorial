@@ -22,7 +22,7 @@ registerBlockType( 'alecadd-giveaway/my-fourth-block', {
                         placeholder='2023-12-31'
                         value={props.attributes.myCustomString}
                         onChange={(value) =>
-                            props.setAttributes({ myCustomString: value })
+                        props.setAttributes({ myCustomString: value })
                         }
                     />
                 </InspectorControls>

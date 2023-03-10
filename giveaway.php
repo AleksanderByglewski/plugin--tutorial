@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     The Second Example
+ * Plugin Name:     Tutorial with steps
  * Description:     Example block written with ESNext standard and JSX support – build step required.
  * Version:         0.1.0
  * Author:          The WordPress Contributors
