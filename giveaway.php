@@ -36,7 +36,7 @@ function create_block_alecaddd_giveaway_block_init() {
 	);
 	wp_set_script_translations( 'create-block-alecaddd-giveaway-block-editor', 'alecaddd-giveaway' );
 
-	$editor_css = 'build/index.css';
+	$editor_css = 'build/style-index.css';
 	wp_register_style(
 		'create-block-alecaddd-giveaway-block-editor',
 		plugins_url( $editor_css, __FILE__ ),
