@@ -197,6 +197,110 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "./src/blocks/redo-block.js":
+/*!**********************************!*\
+  !*** ./src/blocks/redo-block.js ***!
+  \**********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/*Rejestracja statycznego contentu */
+
+
+function conditionalCheck(firstName, lastName) {
+  {
+    if (firstName == "Alex") {
+      return "The conditional doesn't fail";
+    } else {
+      return "The conditional fails";
+    }
+  }
+}
+
+var author = {
+  firstName: 'Alex',
+  lastName: 'Byglewski'
+};
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('u24web/redo', {
+  title: '1. Redo',
+  icon: 'smiley',
+  category: 'common',
+  attributes: {
+    textContent: {
+      type: 'string',
+      value: ''
+    }
+  },
+  edit: function edit(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, conditionalCheck(author.firstName, author.lastName)));
+  },
+  save: function save(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, conditionalCheck(author.firstName, author.lastName));
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/redo-two-block.js":
+/*!**************************************!*\
+  !*** ./src/blocks/redo-two-block.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+
+
+/*Rejestracja statycznego contentu */
+
+
+
+var message = 'alert("Hello world")';
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('u24web/redo-two', {
+  title: '2. Redo in different style',
+  icon: 'smiley',
+  category: 'common',
+  attributes: {
+    textContent: {
+      type: 'string',
+      value: ''
+    }
+  },
+  edit: function edit(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "Hello", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("script", {
+      dangerouslySetInnerHTML: {
+        __html: message
+      }
+    }));
+  },
+  save: function save(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "Hello", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("script", {
+      dangerouslySetInnerHTML: {
+        __html: message
+      }
+    }));
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/social-row-block.json":
 /*!******************************************!*\
   !*** ./src/blocks/social-row-block.json ***!
@@ -641,14 +745,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_step_four__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/step-four */ "./src/blocks/step-four.js");
 /* harmony import */ var _blocks_step_five__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/step-five */ "./src/blocks/step-five.js");
 /* harmony import */ var _blocks_step_six__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/step-six */ "./src/blocks/step-six.js");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _blocks_social_row__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/social-row */ "./src/blocks/social-row.js");
+/* harmony import */ var _blocks_redo_block__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/redo-block */ "./src/blocks/redo-block.js");
+/* harmony import */ var _blocks_redo_two_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/redo-two-block */ "./src/blocks/redo-two-block.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _blocks_social_row__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/social-row */ "./src/blocks/social-row.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
 
 
 
@@ -676,8 +784,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])(_objectSpread({
-  name: _blocks_social_row__WEBPACK_IMPORTED_MODULE_10__["name"]
-}, _blocks_social_row__WEBPACK_IMPORTED_MODULE_10__["metadata"]), _blocks_social_row__WEBPACK_IMPORTED_MODULE_10__["settings"]);
+  name: _blocks_social_row__WEBPACK_IMPORTED_MODULE_12__["name"]
+}, _blocks_social_row__WEBPACK_IMPORTED_MODULE_12__["metadata"]), _blocks_social_row__WEBPACK_IMPORTED_MODULE_12__["settings"]);
 
 /***/ }),
 

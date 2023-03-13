@@ -8,6 +8,8 @@ import './blocks/step-three';
 import './blocks/step-four';
 import './blocks/step-five';
 import './blocks/step-six';
+import './blocks/redo-block';
+import './blocks/redo-two-block';
 // import './blocks/step-four';
 
 // import './blocks/second-block'; // Add this line

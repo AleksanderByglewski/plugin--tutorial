@@ -59,3 +59,4 @@ function create_block_alecaddd_giveaway_block_init() {
 	) );
 }
 add_action( 'init', 'create_block_alecaddd_giveaway_block_init' );
+
